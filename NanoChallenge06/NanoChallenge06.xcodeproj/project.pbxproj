@@ -65,6 +65,7 @@
 		0507B0C326D57BBC00FC7022 /* nano06Widget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = nano06Widget.intentdefinition; sourceTree = "<group>"; };
 		0507B0C426D57BBD00FC7022 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0507B0C626D57BBD00FC7022 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05A84EB426D8239700AF7A25 /* nano06WidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = nano06WidgetExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +91,7 @@
 		050658FF26D4136600DE12E7 = {
 			isa = PBXGroup;
 			children = (
+				05A84EB426D8239700AF7A25 /* nano06WidgetExtension.entitlements */,
 				0506590A26D4136600DE12E7 /* NanoChallenge06 */,
 				0507B0C026D57BBC00FC7022 /* nano06Widget */,
 				0507B0BB26D57BBC00FC7022 /* Frameworks */,
@@ -445,6 +447,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = nano06WidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YGLNR3UHKC;
 				INFOPLIST_FILE = nano06Widget/Info.plist;
@@ -466,6 +469,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = nano06WidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YGLNR3UHKC;
 				INFOPLIST_FILE = nano06Widget/Info.plist;
