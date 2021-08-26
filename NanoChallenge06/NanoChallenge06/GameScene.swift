@@ -42,7 +42,7 @@ class GameScene: SKScene {
         addChild(mainLabel)
         
         constant = SKLabelNode(text: "0ml")
-        constant.fontColor = .white
+        constant.fontColor = UIColor(named: "fonte")
         constant.fontName = "PatrickHand-Regular"
         constant.fontSize = 30
         constant.zPosition = 11
@@ -53,16 +53,16 @@ class GameScene: SKScene {
         progressBar?.updateProgresso(hp/maxHp)
         
         //UIColor(red: 20, green: 17, blue: 163, alpha: 1)
-        parabens = SKLabelNode(text: "Parabéns!")
-        parabens.fontName = "BalsamiqSans-Regular"
-        parabens.fontColor = .blue
+        parabens = SKLabelNode(fontNamed: "BalsamiqSans-Bold")
+        parabens.text = "Parabéns"
+        parabens.fontColor = UIColor(named: "fonte")
         parabens.fontSize = 40
         parabens.position = CGPoint(x: frame.midX, y: constant.position.y - 45)
         
         completo = SKLabelNode(text: "Você tomou o recomendado de 2 litros de água por dia. Continue assim! (e não esqueça do seu amigo coelho)")
         completo.fontName = "PatrickHand-Regular"
         completo.fontSize = 31
-        completo.fontColor = UIColor(red: 20, green: 17, blue: 163, alpha: 1)
+        completo.fontColor = UIColor(named: "fonte")
         completo.position = CGPoint(x: frame.midX, y: parabens.position.y - 80)
         completo.numberOfLines = -1
         completo.preferredMaxLayoutWidth = 450
@@ -106,7 +106,7 @@ class GameScene: SKScene {
         self.addChild(waterUp)
         
         cups = SKLabelNode(text: "\(drinked)/8 copos")
-        cups.fontColor = .white
+        cups.fontColor = UIColor(named: "fonte")
         cups.fontName = "PatrickHand-Regular"
         cups.fontSize = 30
         cups.position = CGPoint(x: self.frame.midX, y: waterUp.position.y - 100)

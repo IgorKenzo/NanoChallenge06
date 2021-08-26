@@ -20,6 +20,7 @@
 		0507B0C726D57BBD00FC7022 /* nano06Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 0507B0C326D57BBC00FC7022 /* nano06Widget.intentdefinition */; };
 		0507B0C826D57BBD00FC7022 /* nano06Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 0507B0C326D57BBC00FC7022 /* nano06Widget.intentdefinition */; };
 		0507B0CB26D57BBD00FC7022 /* nano06WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0507B0BA26D57BBC00FC7022 /* nano06WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		05A84EB526D8361300AF7A25 /* BalsamiqSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 976D9D3C26D818E4009D4BF2 /* BalsamiqSans-Bold.ttf */; };
 		97666AF826D57250001B58A4 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97666AF726D57250001B58A4 /* ProgressBar.swift */; };
 		97666AFA26D578E2001B58A4 /* WaterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97666AF926D578E2001B58A4 /* WaterButton.swift */; };
 		97A6D1FE26D6B4D40050D99E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97A6D1FD26D6B4D40050D99E /* Assets.xcassets */; };
@@ -154,7 +155,7 @@
 				0507B0C626D57BBD00FC7022 /* Info.plist */,
 			);
 			path = nano06Widget;
-      sourceTree = "<group>";
+			sourceTree = "<group>";
 		};
 		97A6D1FF26D6DC4F0050D99E /* fonts */ = {
 			isa = PBXGroup;
@@ -246,6 +247,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05A84EB526D8361300AF7A25 /* BalsamiqSans-Bold.ttf in Resources */,
 				0506591726D4136600DE12E7 /* Main.storyboard in Resources */,
 				0506592126D425B300DE12E7 /* idle.sks in Resources */,
 				97A6D20626D6DD190050D99E /* PatrickHand-Regular.ttf in Resources */,
