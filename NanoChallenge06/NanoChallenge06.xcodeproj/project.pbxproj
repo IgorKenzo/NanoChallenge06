@@ -13,12 +13,43 @@
 		0506591426D4136600DE12E7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0506591326D4136600DE12E7 /* GameViewController.swift */; };
 		0506591726D4136600DE12E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0506591526D4136600DE12E7 /* Main.storyboard */; };
 		0506592126D425B300DE12E7 /* idle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 0506592026D425B300DE12E7 /* idle.sks */; };
+		0507B0BD26D57BBC00FC7022 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0507B0BC26D57BBC00FC7022 /* WidgetKit.framework */; };
+		0507B0BF26D57BBC00FC7022 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0507B0BE26D57BBC00FC7022 /* SwiftUI.framework */; };
+		0507B0C226D57BBC00FC7022 /* nano06Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0507B0C126D57BBC00FC7022 /* nano06Widget.swift */; };
+		0507B0C526D57BBD00FC7022 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0507B0C426D57BBD00FC7022 /* Assets.xcassets */; };
+		0507B0C726D57BBD00FC7022 /* nano06Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 0507B0C326D57BBC00FC7022 /* nano06Widget.intentdefinition */; };
+		0507B0C826D57BBD00FC7022 /* nano06Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 0507B0C326D57BBC00FC7022 /* nano06Widget.intentdefinition */; };
+		0507B0CB26D57BBD00FC7022 /* nano06WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0507B0BA26D57BBC00FC7022 /* nano06WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		97666AF826D57250001B58A4 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97666AF726D57250001B58A4 /* ProgressBar.swift */; };
 		97666AFA26D578E2001B58A4 /* WaterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97666AF926D578E2001B58A4 /* WaterButton.swift */; };
 		97A6D1FE26D6B4D40050D99E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97A6D1FD26D6B4D40050D99E /* Assets.xcassets */; };
 		97A6D20626D6DD190050D99E /* PatrickHand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 97A6D20426D6DCF70050D99E /* PatrickHand-Regular.ttf */; };
 		97A6D20726D6DD1C0050D99E /* BalsamiqSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 97A6D20526D6DD0F0050D99E /* BalsamiqSans-Regular.ttf */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0507B0C926D57BBD00FC7022 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0506590026D4136600DE12E7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0507B0B926D57BBC00FC7022;
+			remoteInfo = nano06WidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0507B0CF26D57BBD00FC7022 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0507B0CB26D57BBD00FC7022 /* nano06WidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0506590826D4136600DE12E7 /* NanoChallenge06.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NanoChallenge06.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,6 +60,15 @@
 		0506591626D4136600DE12E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0506591A26D4136700DE12E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0506592026D425B300DE12E7 /* idle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = idle.sks; sourceTree = "<group>"; };
+		0507B0B526D57B0C00FC7022 /* NanoChallenge06.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NanoChallenge06.entitlements; sourceTree = "<group>"; };
+		0507B0BA26D57BBC00FC7022 /* nano06WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = nano06WidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0507B0BC26D57BBC00FC7022 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		0507B0BE26D57BBC00FC7022 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		0507B0C126D57BBC00FC7022 /* nano06Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nano06Widget.swift; sourceTree = "<group>"; };
+		0507B0C326D57BBC00FC7022 /* nano06Widget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = nano06Widget.intentdefinition; sourceTree = "<group>"; };
+		0507B0C426D57BBD00FC7022 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0507B0C626D57BBD00FC7022 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05A84EB426D8239700AF7A25 /* nano06WidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = nano06WidgetExtension.entitlements; sourceTree = "<group>"; };
 		97666AF726D57250001B58A4 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		97666AF926D578E2001B58A4 /* WaterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterButton.swift; sourceTree = "<group>"; };
 		976D9D3C26D818E4009D4BF2 /* BalsamiqSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BalsamiqSans-Bold.ttf"; sourceTree = "<group>"; };
@@ -45,13 +85,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0507B0B726D57BBC00FC7022 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0507B0BF26D57BBC00FC7022 /* SwiftUI.framework in Frameworks */,
+				0507B0BD26D57BBC00FC7022 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		050658FF26D4136600DE12E7 = {
 			isa = PBXGroup;
 			children = (
+				05A84EB426D8239700AF7A25 /* nano06WidgetExtension.entitlements */,
 				0506590A26D4136600DE12E7 /* NanoChallenge06 */,
+				0507B0C026D57BBC00FC7022 /* nano06Widget */,
+				0507B0BB26D57BBC00FC7022 /* Frameworks */,
 				0506590926D4136600DE12E7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -60,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				0506590826D4136600DE12E7 /* NanoChallenge06.app */,
+				0507B0BA26D57BBC00FC7022 /* nano06WidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +120,7 @@
 		0506590A26D4136600DE12E7 /* NanoChallenge06 */ = {
 			isa = PBXGroup;
 			children = (
+				0507B0B526D57B0C00FC7022 /* NanoChallenge06.entitlements */,
 				97A6D1FF26D6DC4F0050D99E /* fonts */,
 				0506590B26D4136600DE12E7 /* AppDelegate.swift */,
 				0506590D26D4136600DE12E7 /* GameScene.sks */,
@@ -81,6 +135,26 @@
 			);
 			path = NanoChallenge06;
 			sourceTree = "<group>";
+		};
+		0507B0BB26D57BBC00FC7022 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0507B0BC26D57BBC00FC7022 /* WidgetKit.framework */,
+				0507B0BE26D57BBC00FC7022 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0507B0C026D57BBC00FC7022 /* nano06Widget */ = {
+			isa = PBXGroup;
+			children = (
+				0507B0C126D57BBC00FC7022 /* nano06Widget.swift */,
+				0507B0C326D57BBC00FC7022 /* nano06Widget.intentdefinition */,
+				0507B0C426D57BBD00FC7022 /* Assets.xcassets */,
+				0507B0C626D57BBD00FC7022 /* Info.plist */,
+			);
+			path = nano06Widget;
+      sourceTree = "<group>";
 		};
 		97A6D1FF26D6DC4F0050D99E /* fonts */ = {
 			isa = PBXGroup;
@@ -102,15 +176,34 @@
 				0506590426D4136600DE12E7 /* Sources */,
 				0506590526D4136600DE12E7 /* Frameworks */,
 				0506590626D4136600DE12E7 /* Resources */,
+				0507B0CF26D57BBD00FC7022 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0507B0CA26D57BBD00FC7022 /* PBXTargetDependency */,
 			);
 			name = NanoChallenge06;
 			productName = NanoChallenge06;
 			productReference = 0506590826D4136600DE12E7 /* NanoChallenge06.app */;
 			productType = "com.apple.product-type.application";
+		};
+		0507B0B926D57BBC00FC7022 /* nano06WidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0507B0CC26D57BBD00FC7022 /* Build configuration list for PBXNativeTarget "nano06WidgetExtension" */;
+			buildPhases = (
+				0507B0B626D57BBC00FC7022 /* Sources */,
+				0507B0B726D57BBC00FC7022 /* Frameworks */,
+				0507B0B826D57BBC00FC7022 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = nano06WidgetExtension;
+			productName = nano06WidgetExtension;
+			productReference = 0507B0BA26D57BBC00FC7022 /* nano06WidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -122,6 +215,9 @@
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					0506590726D4136600DE12E7 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					0507B0B926D57BBC00FC7022 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
 				};
@@ -140,6 +236,7 @@
 			projectRoot = "";
 			targets = (
 				0506590726D4136600DE12E7 /* NanoChallenge06 */,
+				0507B0B926D57BBC00FC7022 /* nano06WidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -158,6 +255,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0507B0B826D57BBC00FC7022 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0507B0C526D57BBD00FC7022 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -165,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0507B0C826D57BBD00FC7022 /* nano06Widget.intentdefinition in Sources */,
 				0506591226D4136600DE12E7 /* GameScene.swift in Sources */,
 				97666AFA26D578E2001B58A4 /* WaterButton.swift in Sources */,
 				0506591426D4136600DE12E7 /* GameViewController.swift in Sources */,
@@ -173,7 +279,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0507B0B626D57BBC00FC7022 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0507B0C726D57BBD00FC7022 /* nano06Widget.intentdefinition in Sources */,
+				0507B0C226D57BBC00FC7022 /* nano06Widget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0507B0CA26D57BBD00FC7022 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0507B0B926D57BBC00FC7022 /* nano06WidgetExtension */;
+			targetProxy = 0507B0C926D57BBD00FC7022 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0506591526D4136600DE12E7 /* Main.storyboard */ = {
@@ -306,8 +429,10 @@
 		0506591E26D4136700DE12E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NanoChallenge06/NanoChallenge06.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YGLNR3UHKC;
 				INFOPLIST_FILE = NanoChallenge06/Info.plist;
@@ -325,8 +450,10 @@
 		0506591F26D4136700DE12E7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NanoChallenge06/NanoChallenge06.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YGLNR3UHKC;
 				INFOPLIST_FILE = NanoChallenge06/Info.plist;
@@ -336,6 +463,50 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.developerAcademy.challenge.NanoChallenge06;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0507B0CD26D57BBD00FC7022 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = nano06WidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YGLNR3UHKC;
+				INFOPLIST_FILE = nano06Widget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.developerAcademy.challenge.NanoChallenge06.nano06Widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0507B0CE26D57BBD00FC7022 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = nano06WidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YGLNR3UHKC;
+				INFOPLIST_FILE = nano06Widget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.developerAcademy.challenge.NanoChallenge06.nano06Widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -358,6 +529,15 @@
 			buildConfigurations = (
 				0506591E26D4136700DE12E7 /* Debug */,
 				0506591F26D4136700DE12E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0507B0CC26D57BBD00FC7022 /* Build configuration list for PBXNativeTarget "nano06WidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0507B0CD26D57BBD00FC7022 /* Debug */,
+				0507B0CE26D57BBD00FC7022 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
