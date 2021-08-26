@@ -31,6 +31,7 @@
 		0506592026D425B300DE12E7 /* idle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = idle.sks; sourceTree = "<group>"; };
 		97666AF726D57250001B58A4 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		97666AF926D578E2001B58A4 /* WaterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterButton.swift; sourceTree = "<group>"; };
+		976D9D3C26D818E4009D4BF2 /* BalsamiqSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BalsamiqSans-Bold.ttf"; sourceTree = "<group>"; };
 		97A6D1FD26D6B4D40050D99E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97A6D20426D6DCF70050D99E /* PatrickHand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PatrickHand-Regular.ttf"; sourceTree = "<group>"; };
 		97A6D20526D6DD0F0050D99E /* BalsamiqSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BalsamiqSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -84,8 +85,9 @@
 		97A6D1FF26D6DC4F0050D99E /* fonts */ = {
 			isa = PBXGroup;
 			children = (
-				97A6D20426D6DCF70050D99E /* PatrickHand-Regular.ttf */,
+				976D9D3C26D818E4009D4BF2 /* BalsamiqSans-Bold.ttf */,
 				97A6D20526D6DD0F0050D99E /* BalsamiqSans-Regular.ttf */,
+				97A6D20426D6DCF70050D99E /* PatrickHand-Regular.ttf */,
 			);
 			path = fonts;
 			sourceTree = "<group>";
