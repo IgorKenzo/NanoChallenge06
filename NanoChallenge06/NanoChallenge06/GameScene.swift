@@ -38,6 +38,10 @@ class GameScene: SKScene {
     
     override func didMove(to view: SKView) {
         
+        qtd = UserDefaults.standard.integer(forKey: "qtd")
+        drinked = UserDefaults.standard.integer(forKey: "drinked")
+        hp = CGFloat(UserDefaults.standard.float(forKey: "hp"))
+        
         feliz = importAtlas(name: "feliz")
         parado = importAtlas(name: "parado")
         murcho = importAtlas(name: "murcho")
@@ -117,6 +121,10 @@ class GameScene: SKScene {
             self.sprite.run(SKAction.animate(with: self.agua, timePerFrame: 0.1)){
                 self.animateSprite(atlas: self.feliz)
             }
+            
+            UserDefaults.standard.setValue(self.qtd, forKey: "qtd")
+            UserDefaults.standard.setValue(self.drinked, forKey: "drinked")
+            UserDefaults.standard.setValue(Float(self.hp), forKey: "hp")
         }
         
         waterUp.position = CGPoint(x: self.frame.midX, y: self.frame.minY + 200)
