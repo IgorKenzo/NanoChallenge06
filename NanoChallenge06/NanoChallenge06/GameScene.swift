@@ -27,9 +27,23 @@ class GameScene: SKScene {
     var completo: SKLabelNode!
     private var atualMaxWidth : CGFloat = 0
     var notificationDelegate : NotificationDelegate?
-   
+
+    private var feliz : [SKTexture] = []
+    private var parado : [SKTexture] = []
+    private var murcho : [SKTexture] = []
+    private var murchando : [SKTexture] = []
+    private var agua : [SKTexture] = []
+    private var sprite : SKSpriteNode!
+    
     
     override func didMove(to view: SKView) {
+        
+        feliz = importAtlas(name: "feliz")
+        parado = importAtlas(name: "parado")
+        murcho = importAtlas(name: "murcho")
+        murchando = importAtlas(name: "murchando")
+        agua = importAtlas(name: "agua")
+        
         progressBar = ProgressBar()
         progressBar?.position = CGPoint(x: self.frame.midX, y: self.frame.maxY - 200)
         addChild(progressBar!)
@@ -99,6 +113,10 @@ class GameScene: SKScene {
                 }
                 self.constant.position.x = (self.progressBar?.bar.frame.maxX)! + 55
             }
+            
+            self.sprite.run(SKAction.animate(with: self.agua, timePerFrame: 0.1)){
+                self.animateSprite(atlas: self.feliz)
+            }
         }
         
         waterUp.position = CGPoint(x: self.frame.midX, y: self.frame.minY + 200)
@@ -112,6 +130,29 @@ class GameScene: SKScene {
         cups.position = CGPoint(x: self.frame.midX, y: waterUp.position.y - 100)
         addChild(cups)
         
+        self.sprite = self.childNode(withName: "cueio") as? SKSpriteNode
+        self.sprite.texture = feliz[0]
+
+        let lastOpen = UserDefaults.standard.object(forKey: "lastOpen") as? Date
+        let date = Date()
+
+        if let lo = lastOpen {
+            let diffComponents = Calendar.current.dateComponents([.hour], from: lo, to: date)
+            let hours = diffComponents.hour
+
+            if let h = hours {
+                if h >= 2 {
+                    animateSprite(atlas: murcho)
+                    UserDefaults.standard.setValue(date, forKey: "lastOpen")
+                } else {
+                    animateSprite(atlas: parado)
+                }
+            }
+        }else {
+            UserDefaults.standard.setValue(date, forKey: "lastOpen")
+            animateSprite(atlas: feliz)
+        }
+        
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -122,5 +163,24 @@ class GameScene: SKScene {
         self.notificationDelegate?.showInstantNotification(title: "Toma agua", body: "Agua")
     }
     
+    private func importAtlas(name : String) -> [SKTexture]{
+        let animatedAtlas = SKTextureAtlas(named: name)
+        var frames: [SKTexture] = []
+        
+        for i in 1..<animatedAtlas.textureNames.count {
+            frames.append(animatedAtlas.textureNamed("\(name)\(i)"))
+        }
+        return frames
+    }
     
+    
+    
+    func animateSprite(atlas: [SKTexture]) {
+      sprite.run(SKAction.repeatForever(
+        SKAction.animate(with: atlas,
+                         timePerFrame: 0.1,
+                         resize: false,
+                         restore: true)),
+        withKey:"animation")
+    }
 }
