@@ -18,6 +18,7 @@ class GameScene: SKScene {
     
     private var progressBar: ProgressBar?
     var constant: SKLabelNode!
+    var constText: String = "0ml"
     var qtd: Int = 0
     var cups: SKLabelNode!
     var drinked: Int = 0
@@ -41,6 +42,7 @@ class GameScene: SKScene {
         qtd = UserDefaults.standard.integer(forKey: "qtd")
         drinked = UserDefaults.standard.integer(forKey: "drinked")
         hp = CGFloat(UserDefaults.standard.float(forKey: "hp"))
+        constText = UserDefaults.standard.string(forKey: "constText") ?? "0ml"
         
         feliz = importAtlas(name: "feliz")
         parado = importAtlas(name: "parado")
@@ -55,22 +57,22 @@ class GameScene: SKScene {
         let mainLabel = SKLabelNode(text: "Hidratação do dia")
         mainLabel.fontName = "BalsamiqSans-Regular"
         mainLabel.fontSize = 36
-        mainLabel.fontColor = .blue
+        mainLabel.fontColor = UIColor(named: "fonte")
         mainLabel.position = CGPoint(x: self.frame.midX - 90, y: (progressBar?.bar.position.y)! + 530)
         addChild(mainLabel)
         
-        constant = SKLabelNode(text: "0ml")
+        constant = SKLabelNode(text: constText)
         constant.fontColor = UIColor(named: "fonte")
         constant.fontName = "PatrickHand-Regular"
         constant.fontSize = 30
         constant.zPosition = 11
-        constant.position.x = (progressBar?.bar.position.x)! + 10
+        constant.position.x = (UserDefaults.standard.float(forKey: "constPosX").isZero) ? (progressBar?.bar.position.x)! + 10 : CGFloat(UserDefaults.standard.float(forKey: "constPosX"))
         constant.position.y = (progressBar?.bar.position.y)! + 385
         addChild(constant)
         
+        
         progressBar?.updateProgresso(hp/maxHp)
         
-        //UIColor(red: 20, green: 17, blue: 163, alpha: 1)
         parabens = SKLabelNode(fontNamed: "BalsamiqSans-Bold")
         parabens.text = "Parabéns"
         parabens.fontColor = UIColor(named: "fonte")
@@ -93,29 +95,35 @@ class GameScene: SKScene {
                 self.qtd += 250
                 self.drinked += 1
                 self.cups.text = "\(self.drinked)/8 copos"
-                self.constant.text = "\(self.qtd)ml"
-                self.constant.position.x = (self.progressBar?.bar.frame.maxX)! + 55
+                self.constText = "\(self.qtd)ml"
+                self.constant.text = self.constText
+                self.constant.position.x += 55
             } else if self.qtd != 2000{
                 self.qtd += 250
                 self.drinked += 1
                 self.cups.text = "\(self.drinked)/8 copos"
                 switch self.qtd {
                 case 1000:
-                    self.constant.text = "1L"
+                    self.constText = "1L"
+                    self.constant.text = self.constText
                 case 1250:
-                    self.constant.text = "1,25L"
+                    self.constText = "1,25L"
+                    self.constant.text = self.constText
                 case 1500:
-                    self.constant.text = "1,5L"
+                    self.constText = "1,5L"
+                    self.constant.text = self.constText
                 case 1750:
-                    self.constant.text = "1,75L"
+                    self.constText = "1,75L"
+                    self.constant.text = self.constText
                 case 2000:
-                    self.constant.text = "2L"
+                    self.constText = "2L"
+                    self.constant.text = self.constText
                     self.addChild(self.parabens)
                     self.addChild(self.completo)
                 default:
                     break
                 }
-                self.constant.position.x = (self.progressBar?.bar.frame.maxX)! + 55
+                self.constant.position.x += 55
             }
             
             self.sprite.run(SKAction.animate(with: self.agua, timePerFrame: 0.1)){
@@ -125,6 +133,8 @@ class GameScene: SKScene {
             UserDefaults.standard.setValue(self.qtd, forKey: "qtd")
             UserDefaults.standard.setValue(self.drinked, forKey: "drinked")
             UserDefaults.standard.setValue(Float(self.hp), forKey: "hp")
+            UserDefaults.standard.setValue(self.constText, forKey: "constText")
+            UserDefaults.standard.setValue(Float(self.constant.position.x), forKey: "constPosX")
         }
         
         waterUp.position = CGPoint(x: self.frame.midX, y: self.frame.minY + 200)
