@@ -27,7 +27,6 @@ class GameScene: SKScene {
     var parabens: SKLabelNode!
     var completo: SKLabelNode!
     private var atualMaxWidth : CGFloat = 0
-    var notificationDelegate : NotificationDelegate?
 
     private var feliz : [SKTexture] = []
     private var parado : [SKTexture] = []
@@ -135,6 +134,7 @@ class GameScene: SKScene {
             UserDefaults.standard.setValue(Float(self.hp), forKey: "hp")
             UserDefaults.standard.setValue(self.constText, forKey: "constText")
             UserDefaults.standard.setValue(Float(self.constant.position.x), forKey: "constPosX")
+            UserDefaults.standard.setValue(Date(), forKey: "lastOpen")
         }
         
         waterUp.position = CGPoint(x: self.frame.midX, y: self.frame.minY + 200)
@@ -161,7 +161,6 @@ class GameScene: SKScene {
             if let h = hours {
                 if h >= 2 {
                     animateSprite(atlas: murcho)
-                    UserDefaults.standard.setValue(date, forKey: "lastOpen")
                 } else {
                     animateSprite(atlas: parado)
                 }
@@ -175,10 +174,6 @@ class GameScene: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
         
-    }
-    
-    private func checkWatermeter() {
-        self.notificationDelegate?.showInstantNotification(title: "Toma agua", body: "Agua")
     }
     
     private func importAtlas(name : String) -> [SKTexture]{
