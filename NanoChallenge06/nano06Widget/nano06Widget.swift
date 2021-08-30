@@ -63,26 +63,26 @@ struct Provider : TimelineProvider {
 //    var sede : Bool = false
     
     func placeholder(in context: Context) -> SpriteEntry {
-        SpriteEntry(date: Date(), imgName: "idle_1")
+        SpriteEntry(date: Date(), imgName: "parado0")
     }
     
     func getSnapshot(in context: Context, completion: @escaping (SpriteEntry) -> Void) {
-        completion(SpriteEntry(date: Date(), imgName: "idle_1"))
+        completion(SpriteEntry(date: Date(), imgName: "parado0"))
     }
     
     //Puxar nova data e afalar pro widget att
     func getTimeline(in context: Context, completion: @escaping (Timeline<SpriteEntry>) -> Void) {
         let now = Date()
         //"dead_3" : "idle_1"
-        var entries : [SpriteEntry] = []
-        for minuteOffset in (0..<3) {
-            let entryDate = Calendar.current.date(byAdding: .second, value: minuteOffset, to: now)!
-            let entry = SpriteEntry(date: entryDate, imgName: (minuteOffset % 2 == 0) ? "dead_3" : "idle_1")
-            entries.append(entry)
-        }
+//        var entries : [SpriteEntry] = []
+//        for minuteOffset in (0..<3) {
+//            let entryDate = Calendar.current.date(byAdding: .second, value: minuteOffset, to: now)!
+//            let entry = SpriteEntry(date: entryDate, imgName: (minuteOffset % 2 == 0) ? "dead_3" : "idle_1")
+//            entries.append(entry)
+//        }
         
-        //let entry = SpriteEntry(date: now, imgName: name)
-        let timeline = Timeline(entries: entries, policy: .after(Date().addingTimeInterval(10)))
+        let entry = SpriteEntry(date: now, imgName: "parado0")
+        let timeline = Timeline(entries: [entry], policy: .atEnd)
         completion(timeline)
     }
     
